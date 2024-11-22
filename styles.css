@@ -427,12 +427,24 @@ main {
 }
 
 /* Cada bloco de preço */
-.pricing-block {
+.pricing-block1 {
     background-color: #fff;
     color: #262460;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 18px 18px rgba(11, 193, 7, 0.6);
+    text-align: center;
+    /* Sombra leve */
+    font-size: 1rem;
+    min-width: 150px;
+}
+
+.pricing-block2 {
+    background-color: #fff;
+    color: #262460;
+    padding: 25px 25px;
+    border-radius: 15px;
+    box-shadow: 0 18px 18px rgba(11, 193, 7, 0.6);
     text-align: center;
     /* Sombra leve */
     font-size: 1rem;
@@ -456,24 +468,16 @@ main {
 .cta-button {
     display: inline-block;
     background-color: #68b980;
-    /* Amarelo chamativo */
     color: #fffefe;
     text-decoration: none;
+    background-color: #39ff14;
+    box-shadow: 0 0 10px 4px rgba(11, 252, 3, 0.8), 0 0 20px 6px rgba(11, 193, 7, 0.6), 0 0 30px 8px rgba(255, 193, 7, 0.4);
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Hover no botão */
-.cta-button {
-    background-color: #39ff14;
-    transform: translateY(-3px);
-    box-shadow: 0 0 10px 4px rgba(11, 252, 3, 0.8), 0 0 20px 6px rgba(11, 193, 7, 0.6), 0 0 30px 8px rgba(255, 193, 7, 0.4);
-    /* Efeito neon */
-}
-
 
 /* Seções */
 main section {
