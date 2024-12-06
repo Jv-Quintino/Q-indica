@@ -74,6 +74,30 @@ main {
     /* Centraliza verticalmente */
 }
 
+/* Botão fixo do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 2s infinite;
+    /* Aplica a animação de pulsar */
+}
+
+/* Estilo da imagem dentro do botão */
+.whatsapp-button img {
+    width: 60px;
+    /* Tamanho inicial da logo */
+    height: 60px;
+    border: none;
+    /* Remove bordas */
+    background: transparent;
+    /* Fundo transparente */
+}
+
 /* Vídeo */
 .video-container {
     display: block;
@@ -590,6 +614,24 @@ footer {
 .animate-text.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Animação de pulsar(Botão Whatsapp) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        /* Tamanho normal */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Aumenta em 10% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Volta ao tamanho normal */
+    }
 }
 
 /* Responsividade */
