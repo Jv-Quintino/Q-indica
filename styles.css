@@ -11,7 +11,7 @@ Verde 3 : #25aa6a
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -19,59 +19,55 @@ body {
 }
 
 /* Cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: #ffffff;
+    position: relative;
+    background: #262460;
     color: white;
     padding: 20px;
     margin-top: 30px;
-    /* Espaço acima */
     margin-bottom: 60px;
-    /* Espaço abaixo */
+    height: 200px;
+}
+
+/* Gradiente na parte inferior do cabeçalho */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(38, 36, 96, 0) 10%, #ffffff 90%);
 }
 
 .header-with-bg {
     background-image: url('images/cabecalho.png');
-    /* Caminho da imagem */
     background-size: cover;
-    /* Garante que a imagem cubra todo o cabeçalho */
     background-position: center;
-    /* Centraliza a imagem */
     background-repeat: no-repeat;
-    /* Evita repetições */
     height: 40vh;
-    /* Reduz a altura do cabeçalho para 60% da altura da tela */
     display: flex;
-    /* Centraliza o conteúdo */
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
-    /* Torna o texto visível */
     font-size: 2rem;
-    /* Tamanho do texto */
     margin: 0;
-    /* Remove margens externas */
     padding: 20px 0;
-    /* Reduz o espaçamento interno vertical */
 }
 
 main {
     margin-top: 0;
-    /* Remove margens acima do conteúdo principal */
     padding-top: 20px;
-    /* Espaço mínimo para separação */
 }
 
 /*Logo para ser utilizada ao longo do Site*/
 .logo-img {
     max-width: 200px;
-    /* Ajuste o tamanho máximo da imagem */
     height: auto;
-    /* Mantém a proporção da imagem */
     display: inline-block;
-    /* Garante que fique na mesma linha se necessário */
     vertical-align: bottom;
-    /* Centraliza verticalmente */
 }
 
 /* Botão fixo do WhatsApp */
@@ -510,8 +506,18 @@ main section {
     margin: 40px 20px;
 }
 
-h1,
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 439;
+    color: #262460;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     color: #262460;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
