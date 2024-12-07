@@ -19,7 +19,6 @@ body {
 }
 
 /* Cabeçalho */
-/* Cabeçalho */
 header {
     position: relative;
     background: #262460;
@@ -80,18 +79,14 @@ main {
     justify-content: center;
     align-items: center;
     animation: pulse 2s infinite;
-    /* Aplica a animação de pulsar */
 }
 
 /* Estilo da imagem dentro do botão */
 .whatsapp-button img {
     width: 60px;
-    /* Tamanho inicial da logo */
     height: 60px;
     border: none;
-    /* Remove bordas */
     background: transparent;
-    /* Fundo transparente */
 }
 
 /* Vídeo */
@@ -101,25 +96,20 @@ main {
     width: 80%;
     max-width: 700px;
     height: 400px;
-    /* Altura proporcional */
     border: 5px solid #262460;
     border-radius: 15px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 60px;
-    /* Espaço abaixo */
 }
 
 /* Contêiner de benefícios */
 .benefits-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-    /* Largura mínima e máxima */
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
-    /* Espaço acima */
     margin-bottom: 60px;
-    /* Espaço abaixo */
 }
 
 /* Estilo dos bloquinhos */
@@ -180,74 +170,112 @@ main {
     }
 }
 
-/* Contêiner de NOPE benefícios */
-.nope-benefits-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-    /* Largura mínima e máxima */
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-    /* Espaço acima */
-    margin-bottom: 60px;
-    /* Espaço abaixo */
-}
-
-.highlight {
-    color: #e20606;
-    /* Cor desejada */
-    font-weight: bold;
-    /* Opcional: deixar em negrito */
-}
-
-/* Estilo dos bloquinhos */
-.nope-benefit-block {
-    background-image: url('images/x.png');
-    /* Caminho da imagem de fundo */
-    background-size: 80px;
-    /* Tamanho da imagem */
-    background-position: center;
-    /* Centraliza a imagem de fundo */
-    background-repeat: no-repeat;
-    /* Evita repetições */
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Cor branca semi-transparente */
-    background-blend-mode: lighten;
-    /* Mistura a cor com a imagem */
-    border: 2px solid #ddd;
-    /* Borda leve */
-    border-radius: 8px;
-    /* Cantos arredondados */
-    padding: 30px;
-    /* Espaçamento interno */
+.beneficios2 {
     text-align: center;
-    /* Centraliza o texto */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra leve */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Efeito de hover */
+    padding: 40px;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-/* Efeito ao passar o mouse */
-.nope-benefit-block {
-    transform: translateY(-5px);
-    /* Move o bloquinho levemente para cima */
-    box-shadow: 0 6px 12px #e20606;
-    /* Aumenta a sombra */
-}
-
-/* Estilo dos títulos */
-.nope-benefit-block h3 {
-    font-size: 1.2rem;
-    color: #e20606;
-    margin-bottom: 10px;
-}
-
-/* Estilo dos parágrafos */
-.nope-benefit-block p {
-    font-size: 1rem;
+.beneficios2 h2 {
     color: #262460;
-    line-height: 1.5;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.beneficio2-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.beneficio2-icon {
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .beneficio2-icon {
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beneficio2-icon {
+        width: 30px;
+    }
+}
+
+
+.beneficio2-item p {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+.beneficio2-item strong {
+    color: #04c852;
+    /* Destaque em verde */
+}
+
+.beneficios2 hr {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+}
+
+.beneficios2 .disclaimer {
+    font-size: 0.9rem;
+    color: #ff0000;
+    /* Cor vermelha para o texto de aviso */
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.beneficio2-buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* Transição suave para os efeitos */
+}
+
+.beneficio2-buttons .button-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.beneficio2-buttons .button-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.beneficio2-buttons .button-secondary {
+    background-color: #04c852;
+    color: #fff;
+    border: none;
+}
+
+.beneficio2-buttons .button-secondary:hover {
+    background-color: #039645;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 /*Provas Sociais*/
@@ -276,153 +304,105 @@ main {
     box-shadow: 0 4px 8px #262460;
     /* Sombra suave */
     object-fit: cover;
-    /* Garante que a imagem cubra toda a área da section sem distorcer */
 }
 
-/* Responsivo para telas menores */
 @media (max-width: 768px) {
     .nope-benefits-container {
         grid-template-columns: 1fr;
-        /* Um bloquinho por linha */
     }
 }
 
 #button {
     display: flex;
-    /* Centraliza o botão */
     justify-content: center;
-    /* Centraliza horizontalmente */
     margin: 100px 0;
-    /* Espaçamento acima e abaixo da seção */
 }
 
 #button .cta {
     display: inline-block;
-    /* Mantém o botão responsivo */
     background-color: #25aa6a;
-    /* Cor de fundo */
     color: #fff;
-    /* Cor do texto */
     text-decoration: none;
-    /* Remove o sublinhado */
     padding: 40px 60px;
-    /* Tamanho reduzido do botão */
     border-radius: 20px;
-    /* Bordas arredondadas */
     font-size: 1rem;
-    /* Tamanho da fonte menor */
     font-weight: bold;
-    /* Texto em negrito */
     box-shadow: 0 6px 12px #25aa6a;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Transição suave */
 }
 
 #button .cta:hover {
     background-color: #008000;
-    /* Cor ao passar o mouse */
     transform: scale(1.1);
-    /* Leve aumento ao passar o mouse */
 }
 
 #button .cta:active {
     transform: scale(0.95);
-    /* Leve redução ao clicar */
 }
 
 /*Chamada*/
 #chamada {
     margin: 100px 0;
-    /* Espaçamento acima e abaixo da seção */
     text-align: center;
-    /* Centraliza o conteúdo dentro da seção */
 }
 
 .chamada-container {
     display: flex;
-    /* Configuração flexível para centralizar a imagem */
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Centraliza verticalmente */
 }
 
 .chamada-image {
     width: 100%;
-    /* Responsivo: a imagem ocupa toda a largura disponível */
     max-width: none;
-    /* Limita o tamanho máximo da imagem */
     height: auto;
-    /* Mantém a proporção da imagem */
     border-radius: 5px;
-    /* Bordas suaves */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    /* Sombra suave */
 }
-
-/*  Chamada2    */
 
 /* Estilo geral da seção */
 #image-blocks {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* Ajusta os itens para várias linhas em telas menores */
     gap: 70px;
-    /* Espaçamento entre os bloquinhos */
     margin: 50px 0;
-    /* Espaçamento superior e inferior */
 }
 
 /* Estilo dos bloquinhos */
 #image-blocks .block {
     text-align: left;
     width: 450px;
-    /* Largura fixa para os bloquinhos */
     background-color: #f7f7f7;
-    /* Fundo neutro */
     border-radius: 15px;
-    /* Cantos arredondados */
     padding: 20px;
-    /* Espaçamento interno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    /* Sombra leve */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Efeito de hover */
 }
 
 /* Estilo das imagens */
 #image-blocks .block img {
     width: 100%;
-    /* Faz a imagem se ajustar à largura do bloquinho */
     border-radius: 8px;
-    /* Arredonda as bordas das imagens */
 }
 
 /* Estilo das frases */
 #image-blocks .block p {
     margin-top: 10px;
-    /* Espaçamento entre imagem e texto */
     font-size: 0.9rem;
-    /* Tamanho da fonte ajustado */
     color: #333;
 }
 
 /* Estilo geral do CTA */
 #cta-final {
     background-color: #262460;
-    /* Azul chamativo */
     color: #fff;
-    /* Texto branco */
     padding: 40px 20px;
     text-align: center;
     border-radius: 12px;
-    /* Cantos arredondados */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Sombra para destaque */
     margin: 50px auto;
     max-width: 800px;
-    /* Limita a largura do bloco */
 }
 
 /* Título do CTA */
@@ -445,7 +425,6 @@ main {
     gap: 30px;
     margin-bottom: 40px;
     flex-wrap: wrap;
-    /* Ajusta em telas menores */
 }
 
 /* Cada bloco de preço */
@@ -456,7 +435,6 @@ main {
     border-radius: 15px;
     box-shadow: 0 18px 18px rgba(11, 193, 7, 0.6);
     text-align: center;
-    /* Sombra leve */
     font-size: 1rem;
     min-width: 150px;
 }
@@ -468,7 +446,6 @@ main {
     border-radius: 15px;
     box-shadow: 0 18px 18px rgba(11, 193, 7, 0.6);
     text-align: center;
-    /* Sombra leve */
     font-size: 1rem;
     min-width: 150px;
 }
@@ -508,15 +485,15 @@ main section {
 
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 439;
+    font-weight: 900;
     color: #262460;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
 
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 300;
     color: #262460;
     margin-bottom: 20px;
@@ -531,36 +508,25 @@ ul {
 /*Aviso Legal*/
 #legal-notice {
     background-color: #f8f9fa;
-    /* Cor de fundo clara para destacar sem sobrecarregar */
     padding: 20px;
     margin-top: 25px;
     border-top: 1px solid #ddd;
-    /* Linha separadora */
     font-size: 0.1rem;
-    /* Tamanho de fonte menor para não roubar a atenção */
     color: #555;
-    /* Cor de texto mais suave */
     text-align: center;
-    /* Centraliza o texto */
 }
 
 .legal-text {
     line-height: 1.6;
-    /* Aumenta o espaçamento entre as linhas para melhorar a leitura */
     max-width: 90%;
-    /* Limita a largura do texto para não ficar muito espalhado */
     margin: 0 auto;
-    /* Centraliza o texto */
     word-wrap: break-word;
-    /* Quebra as palavras longas para evitar que ultrapassem o limite */
 }
 
 /* Estilos do Footer */
 footer {
     background-color: #262460;
-    /* Fundo escuro para o footer */
     color: #fff;
-    /* Texto claro */
     padding: 7px 0;
     text-align: center;
 }
@@ -626,17 +592,14 @@ footer {
 @keyframes pulse {
     0% {
         transform: scale(1);
-        /* Tamanho normal */
     }
 
     50% {
         transform: scale(1.1);
-        /* Aumenta em 10% */
     }
 
     100% {
         transform: scale(1);
-        /* Volta ao tamanho normal */
     }
 }
 
