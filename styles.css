@@ -264,6 +264,8 @@ main {
     background-color: #0056b3;
     transform: scale(1.1);
     transition: all 0.3s ease;
+    box-shadow: 0 0 5px #0056b3, 0 0 25px #0056b3,
+    0 0 50px #0056b3, 0 0 200px #0056b3;
 }
 
 .beneficio2-buttons .button-secondary {
@@ -276,6 +278,8 @@ main {
     background-color: #039645;
     transform: scale(1.1);
     transition: all 0.3s ease;
+    box-shadow: 0 0 5px #039645, 0 0 25px #039645,
+    0 0 50px #039645, 0 0 200px #039645;
 }
 
 /*Provas Sociais*/
@@ -475,7 +479,16 @@ main {
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #39ff14;
+    transform: scale(1.1);
+}
+
+.cta-button:active {
+    transform: scale(0.95);
 }
 
 /* Seções */
