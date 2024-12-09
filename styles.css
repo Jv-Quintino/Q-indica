@@ -207,16 +207,19 @@ main {
     flex: 1;
     font-size: 1rem;
     color: #333;
+    text-shadow: none;
 }
 
 .beneficio2-item strong {
     color: #04c852;
+    text-shadow: none;
 }
 
 .beneficios2 hr {
     border: none;
     border-top: 1px solid #eaeaea;
     margin: 20px 0;
+    text-shadow: none;
 }
 
 .beneficios2 .disclaimer {
@@ -266,61 +269,63 @@ main {
 
 .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content:left; /* Centraliza os itens */
     align-items: center;
-    gap: 20px;
+    gap: 1px; /* Diminui o espaço entre as imagens */
+  
 }
-
-.banner-image {
-    width: 55%;
+  
+  .banner-image {
+    width: 40%; /* Aumenta o tamanho das imagens */
+    max-width: none;
+    margin-top: 20;
+    margin-bottom: 20px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0; /* Inicialmente invisíveis */
+    transform: translateX(0); /* Sem deslocamento inicial */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Suaviza a transição */ 
+  }
+  
+  .mockup-image {
+    width: 18%; /* Aumenta o tamanho das imagens */
     max-width: 100%;
     height: auto;
-    opacity: 0;
-    transform: translateX(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.mockup-image {
-    width: 25%;
-    max-width: 100%;
-    height: auto;
-    opacity: 0;
-    transform: translateX(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-#banner-image {
-    animation: slideInLeft 0.5s forwards;
-}
-
-#mockup-image {
-    animation: slideInRight 0.5s 0.5s forwards;
-}
-
-/* Animações */
-@keyframes slideInLeft {
+    opacity: 0; /* Inicialmente invisíveis */
+    transform: translateX(0); /* Sem deslocamento inicial */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Suaviza a transição */
+  }
+  
+  #banner-image {
+    animation: fadeIn 0.6s forwards; /* Efeito de surgir */
+  }
+  
+  #mockup-image {
+    animation: slideFromRight 0.6s 0.6s forwards; /* Chega da direita, com atraso */
+  }
+  
+  /* Animação para "surgir" */
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateX(-100%);
+      opacity: 0;
     }
-
     to {
-        opacity: 1;
-        transform: translateX(0);
+      opacity: 1;
     }
-}
-
-@keyframes slideInRight {
+  }
+  
+  /* Animação para chegar da direita */
+  @keyframes slideFromRight {
     from {
-        opacity: 0;
-        transform: translateX(100%);
+      opacity: 0;
+      transform: translateX(100%); /* Começa fora da tela pela direita */
     }
-
     to {
-        opacity: 1;
-        transform: translateX(0);
+      opacity: 1;
+      transform: translateX(0); /* Fica na posição final */
     }
-}
+  }
+  
 
 #button {
     display: flex;
@@ -522,6 +527,7 @@ h2 {
 p,
 ul {
     font-size: 18px;
+    text-shadow: none;
 }
 
 /*Aviso Legal*/
