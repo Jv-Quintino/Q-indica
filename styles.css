@@ -115,37 +115,23 @@ main {
 /* Estilo dos bloquinhos */
 .benefit-block {
     background-image: url('images/favicon.png');
-    /* Caminho da imagem de fundo */
     background-size: 80px;
-    /* Tamanho da imagem */
     background-position: center;
-    /* Centraliza a imagem de fundo */
     background-repeat: no-repeat;
-    /* Evita repetições */
     background-color: rgba(255, 255, 255, 0.8);
-    /* Cor branca semi-transparente */
     background-blend-mode: lighten;
-    /* Mistura a cor com a imagem */
     border: 2px solid #ddd;
-    /* Borda leve */
     border-radius: 8px;
-    /* Cantos arredondados */
     padding: 30px;
-    /* Espaçamento interno */
     text-align: center;
-    /* Centraliza o texto */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra leve */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Efeito de hover */
 }
 
 /* Efeito ao passar o mouse */
 .benefit-block {
     transform: translateY(-5px);
-    /* Move o bloquinho levemente para cima */
     box-shadow: 0 6px 12px #25aa6a;
-    /* Aumenta a sombra */
 }
 
 /* Estilo dos títulos */
@@ -166,7 +152,6 @@ main {
 @media (max-width: 768px) {
     .benefits-container {
         grid-template-columns: 1fr;
-        /* Um bloquinho por linha */
     }
 }
 
@@ -226,7 +211,6 @@ main {
 
 .beneficio2-item strong {
     color: #04c852;
-    /* Destaque em verde */
 }
 
 .beneficios2 hr {
@@ -238,7 +222,6 @@ main {
 .beneficios2 .disclaimer {
     font-size: 0.9rem;
     color: #ff0000;
-    /* Cor vermelha para o texto de aviso */
     margin-top: 20px;
     font-weight: bold;
 }
@@ -251,7 +234,6 @@ main {
     font-weight: bold;
     text-align: center;
     transition: all 0.3s ease;
-    /* Transição suave para os efeitos */
 }
 
 .beneficio2-buttons .button-primary {
@@ -265,7 +247,7 @@ main {
     transform: scale(1.1);
     transition: all 0.3s ease;
     box-shadow: 0 0 5px #0056b3, 0 0 25px #0056b3,
-    0 0 50px #0056b3, 0 0 200px #0056b3;
+        0 0 50px #0056b3, 0 0 200px #0056b3;
 }
 
 .beneficio2-buttons .button-secondary {
@@ -279,40 +261,64 @@ main {
     transform: scale(1.1);
     transition: all 0.3s ease;
     box-shadow: 0 0 5px #039645, 0 0 25px #039645,
-    0 0 50px #039645, 0 0 200px #039645;
+        0 0 50px #039645, 0 0 200px #039645;
 }
 
-/*Provas Sociais*/
-#image-section {
-    margin-top: 50px;
-    /* Espaço acima da seção */
-    margin-bottom: 50px;
-    /* Espaço abaixo da seção */
-    text-align: center;
-    /* Centraliza a imagem */
-    margin-top: 30px;
-    /* Espaço acima */
-    margin-bottom: 60px;
-    /* Espaço abaixo */
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.responsive-image {
-    width: 80%;
-    /* Garante que a imagem ocupe 60% da largura da section */
+.banner-image {
+    width: 55%;
+    max-width: 100%;
     height: auto;
-    /* Mantém a proporção da imagem */
-    border-radius: 30px;
-    /* Bordas suaves */
-    box-shadow: 0 4px 8px #262460;
-    /* Sombra suave */
-    object-fit: cover;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-@media (max-width: 768px) {
-    .nope-benefits-container {
-        grid-template-columns: 1fr;
+.mockup-image {
+    width: 25%;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#banner-image {
+    animation: slideInLeft 0.5s forwards;
+}
+
+#mockup-image {
+    animation: slideInRight 0.5s 0.5s forwards;
+}
+
+/* Animações */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
