@@ -12,6 +12,7 @@ Verde 3 : #25aa6a
 
 body {
     font-family: 'Arial', sans-serif;
+    padding: 0 15px;
     margin: 0;
     padding: 0;
     color: #333;
@@ -99,6 +100,68 @@ main {
     height: 60px;
     border: none;
     background: transparent;
+}
+
+/* Estilização do container dos bot*/
+.button-container {
+    display: flexbox;
+    font-size: 18px;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0 15px;
+}
+
+/* Estilização dos botões */
+.button-container a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    width: 40px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+a.button-primary {
+    background-color: #262460;
+}
+
+.button-container a:hover {
+    background-color: #0bf72b;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+a.button-secondary {
+    background-color: #25aa6a;
+}
+
+.button-container a:hover {
+    background-color: #0bf72b;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.button-container a:active {
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+/* Ajuste adicional para telas pequenas */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        /* Empilha os botões verticalmente */
+        align-items: center;
+        /* Centraliza os botões */
+    }
+
+    .button-container a {
+        width: 40%;
+        /* Ocupa 80% da largura da tela */
+    }
 }
 
 /* Vídeo */
@@ -237,7 +300,7 @@ main {
     border: 1px solid #eaeaea;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .beneficios2 h2 {
@@ -313,34 +376,6 @@ main {
     transition: all 0.3s ease;
 }
 
-.beneficio2-buttons .button-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-}
-
-.beneficio2-buttons .button-primary:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px #0056b3, 0 0 25px #0056b3,
-        0 0 50px #0056b3, 0 0 200px #0056b3;
-}
-
-.beneficio2-buttons .button-secondary {
-    background-color: #04c852;
-    color: #fff;
-    border: none;
-}
-
-.beneficio2-buttons .button-secondary:hover {
-    background-color: #039645;
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px #039645, 0 0 25px #039645,
-        0 0 50px #039645, 0 0 200px #039645;
-}
-
 /*Prova social*/
 #prova {
     margin: 100px 0;
@@ -383,7 +418,7 @@ main {
 
 /* Estilos para a seção container */
 .container {
-    background-image: url('images/banner_cta.png');
+    background-image: url('images/banner-cta.png');
     background-size: cover;
     background-position: center;
     background-color: #262460;
@@ -403,18 +438,20 @@ main {
 /* Estilos para o lado esquerdo */
 .left {
     flex: 1;
+    background-color: rgba(38, 36, 96, 0.6);
     min-width: 300px;
     text-align: center;
     padding: 20px;
-    border-style: groove;
+    border-style: double;
+    border-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.7);
     margin: 15px;
 }
 
 .left img {
-    width: 300px;
-    height: 77px;
+    width: 190px;
+    height: 60px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -428,6 +465,13 @@ main {
     font-size: 1rem;
     margin: 5px 0;
     color: #fff;
+}
+
+.left .oldprice {
+    font-size: 1.5rem;
+    color: #f70000;
+    text-decoration: line-through;
+    position: relative;
 }
 
 .left .price {
@@ -459,8 +503,6 @@ main {
     flex: 2;
     min-width: 300px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     position: relative;
 }
@@ -588,57 +630,81 @@ ul {
     word-wrap: break-word;
 }
 
-/* Estilos do Footer */
+/* Estilo geral */
 footer {
     background-color: #262460;
-    color: #fff;
-    padding: 7px 0;
-    text-align: center;
+    color: #ecf0f1;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
-.footer-content {
+/* Layout do container principal */
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.social-media {
+/* Lado esquerdo: Ícones sociais */
+.footer-left {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-left img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.footer-left img:hover {
+    transform: scale(1.2);
+}
+
+/* Centro: Direitos reservados */
+.footer-center {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-center p {
+    margin: 0;
+    font-size: 10px;
+}
+
+/* Lado direito: Desenvolvido por */
+.footer-right {
     display: flex;
     align-items: center;
-}
-
-.social-media p {
-    margin-right: 15px;
-    font-size: 1rem;
-}
-
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-.footer-right {
-    text-align: right;
+    gap: 10px;
 }
 
 .footer-right p {
-    font-size: 0.9rem;
-    margin: 5px 0;
+    font-size: 10px;
 }
 
-.footer-logo {
-    width: 35px;
-    height: auto;
-    margin-top: 10px;
+.footer-right img {
+    width: 22px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center;
+        font-size: 10px;
+    }
 }
 
 /* Animações */
@@ -655,20 +721,21 @@ footer {
     transform: translateY(0);
 }
 
-/* Animação de pulsar(Botão Whatsapp) */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px;
+        /* Menor espaçamento em telas pequenas */
     }
 
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 100%;
+        /* Reduz o tamanho das fontes */
     }
 }
+
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
