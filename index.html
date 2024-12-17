@@ -48,7 +48,7 @@
             <!--Botões-->
             <div class="button-container">
                 <a href="https://hotmart.com" class="button-primary">Comprar agora</a>
-                <a href="https://wa.me/558198394496" class="button-secondary">Quero tirar dúvidas</a>
+                <a href="https://wa.me/558198394496" class="button-secondary">Tirar dúvidas</a>
             </div>
             <br>
             <!--Chamada animada-->
@@ -60,13 +60,15 @@
             </div>
             <!-- Benefícios -->
             <section id="benefits">
-                <h1 class="animate-text">O que é o <img src="images/logo.png" alt="Q-Indica" class="logo-img"></h1>
-                <p class="animate-text">A ferramenta possui três pilares de recomendações para turbinar suas vendas:</p>
+                <h1 class="animate-text">Como funciona o <img src="images/logo.png" alt="Q-Indica" class="logo-img">
+                </h1>
+                <p class="animate-text">A ferramenta oferece três principais modos de utilização para melhorar seu
+                    atendimento:</p>
                 <div class="benefits-container">
                     <div class="benefit-block animate-text">
-                        <h3>Recomendações práticas e estratégicas:</h3>
-                        <p>Sugestões que complementam ou agregam valor ao que o cliente já está comprando, aumentando a
-                            cesta de produtos de forma inteligente.</p>
+                        <h3>Lista de sugestões práticas e estratégicas:</h3>
+                        <p>Uma lista estratégica que sugere produtos complementares, agregando valor à compra do cliente
+                            e ampliando a cesta de produtos de forma inteligente e eficiente.</p>
                     </div>
                     <div class="benefit-block animate-text">
                         <h3>Farol de possibilidades:</h3>
@@ -128,7 +130,7 @@
             </section>
             <div class="button-container">
                 <a href="https://hotmart.com" class="button-primary">Comprar agora</a>
-                <a href="https://wa.me/558198394496" class="button-secondary">Quero tirar dúvidas</a>
+                <a href="https://wa.me/558198394496" class="button-secondary">Tirar dúvidas</a>
             </div>
             <br>
             <!--Prova Social-->
@@ -157,7 +159,7 @@
                 <!--Botões-->
                 <div class="button-container">
                     <a href="https://hotmart.com" class="button-primary">Comprar agora</a>
-                    <a href="https://wa.me/558198394496" class="button-secondary">Quero tirar dúvidas</a>
+                    <a href="https://wa.me/558198394496" class="button-secondary">Tirar dúvidas</a>
                 </div>
                 <br>
                 <div class="chamada-container">
@@ -176,7 +178,7 @@
                     <p>De:</p>
                     <p class="oldprice">397,00</p>
                     <p>Por:</p> <span class="price">12x 9,90</span>
-                    <p>Ou 99,97 à vista</p>
+                    <p>Ou 110,97 à vista</p>
                     <a class="buy-now" href="https://hotmart.com">COMPRAR AGORA</a>
                 </div>
                 <div class="right">
@@ -191,7 +193,7 @@
         </li>
         <li class="button-style">
             <i class="fas fa-check"></i>
-            <span>Possui toda a base do ABC Farma</span>
+            <span>Possui mais de 10.000 itens cadastrados</span>
         </li>
         <li class="button-style">
             <i class="fas fa-check"></i>
@@ -267,16 +269,6 @@
         });
     };
 
-    // Desativa o cache usando um pedido GET com cabeçalho
-    fetch('app.js', {
-        cache: 'no-store'
-    })
-        .then(response => response.text())
-        .then(data => {
-            const script = document.createElement('script');
-            script.innerHTML = data; // Insere o conteúdo do JS atualizado
-            document.body.appendChild(script);
-        });
 </script>
 <script src="scripts.js"></script>
 

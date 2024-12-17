@@ -1,37 +1,27 @@
-/* Estilo global */
-
-/* --Paleta de cores-- 
-Azul    : #262460
-Verde 1 : #94cba9
-Verde 2 : #68b980 
-Verde 3 : #25aa6a
-*/
-
 body {
     font-family: 'Arial', sans-serif;
     padding: 0 15px;
     margin: 0;
     padding: 0;
     color: #333;
-    text-align: center;
+    text-align: center
 }
 
-/* Cabeçalho */
 header {
     background: #262460;
-    color: white;
+    color: #fff;
     padding: 20px;
     margin-top: 30px;
     margin-bottom: 60px;
-    height: 25vh;
+    height: 25vh
 }
 
 .header-with-bg {
-    background-image: url('images/cabecalho3.png');
+    background-image: url(images/cabecalho3.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,43 +29,40 @@ header {
     color: #fff;
     font-size: 2rem;
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 0
 }
 
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .header-with-bg {
         height: 20vh;
         font-size: 1.5rem;
         background-size: contain;
-        padding: 8px;
+        padding: 8px
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .header-with-bg {
         height: 12vh;
         font-size: 1rem;
         padding: 10px 0 10px;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-start
     }
 }
 
 main {
-    margin-top: 10px;
+    margin-top: 10px
 }
 
-/*Logo para ser utilizada ao longo do Site*/
 .logo-img {
     max-width: 200px;
     height: auto;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: bottom
 }
 
-/* Botão fixo do WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -84,79 +71,96 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite
 }
 
-/* Estilo da imagem dentro do botão */
 .whatsapp-button img {
     width: 60px;
     height: 60px;
     border: none;
-    background: transparent;
+    background: #fff0
 }
 
-/* Estilização do container dos bot*/
+@keyframes pulse {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
 .button-container {
-    display: flexbox;
+    display: flex;
     justify-content: center;
     gap: 10px;
     margin: 15px 0 15px;
+    flex-wrap: wrap
 }
 
-/* Estilização dos botões */
 .button-container a {
     text-decoration: none;
     color: #fff;
     padding: 10px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: initial;
+    min-width: 120px;
+    box-sizing: border-box;
     border-radius: 20px;
     text-align: center;
-    flex: 1;
-    width: 40px;
-    height: 20px;
-    transition: all 0.3s ease;
+    flex: 1 1 auto;
+    max-width: 200px;
+    transition: all 0.3s ease
+}
+
+@media (max-width:600px) {
+    .button-container {
+        gap: 15px
+    }
 }
 
 a.button-primary {
-    background-color: #262460;
+    background-color: #262460
 }
 
 .button-container a:hover {
     background-color: #0bf72b;
     transform: scale(1.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 a.button-secondary {
-    background-color: #25aa6a;
+    background-color: #25aa6a
 }
 
 .button-container a:hover {
     background-color: #0bf72b;
     transform: scale(1.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .button-container a:active {
-    transform: scale(0.95);
-    transition: all 0.3s ease;
+    transform: scale(.95);
+    transition: all 0.3s ease
 }
 
-/* Ajuste adicional para telas pequenas */
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .button-container {
         flex-direction: column;
-        /* Empilha os botões verticalmente */
-        align-items: center;
-        /* Centraliza os botões */
+        align-items: center
     }
 
     .button-container a {
-        width: 40%;
-        /* Ocupa 80% da largura da tela */
+        width: 40%
     }
 }
 
-/* Vídeo */
 .video-container {
     display: block;
     margin: 20px auto;
@@ -165,16 +169,15 @@ a.button-secondary {
     height: 400px;
     border: 10px solid #262460;
     border-radius: 15px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-    margin-bottom: 60px;
+    box-shadow: 0 6px 10px rgb(0 0 0 / .4);
+    margin-bottom: 60px
 }
 
-/* Banner com animação */
 .animation-banner {
     position: relative;
     width: 100%;
     height: 110vh;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .animation-banner video {
@@ -186,7 +189,7 @@ a.button-secondary {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    z-index: -1;
+    z-index: -1
 }
 
 .animation-banner-overlay {
@@ -195,112 +198,100 @@ a.button-secondary {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    background-color: rgb(0 0 0 / .3);
+    z-index: 1
 }
 
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .animation-banner {
-        height: 50vh;
-        /* Reduz a altura do banner em telas pequenas */
-    }
-
-    .animation-banner video {
-        object-fit: contain;
-        /* Garante que o vídeo seja exibido inteiro */
-        width: auto;
-        /* Adapta a largura do vídeo */
-        height: 100%;
-        /* Preenche a altura */
-    }
-}
-
-@media (max-width: 480px) {
-    .animation-banner {
-        height: 30vh;
-        /* Altura ainda menor para smartphones */
+        height: 50vh
     }
 
     .animation-banner video {
         object-fit: contain;
         width: auto;
-        height: 100%;
+        height: 100%
     }
 }
 
-/* Contêiner de benefícios */
+@media (max-width:480px) {
+    .animation-banner {
+        height: 30vh
+    }
+
+    .animation-banner video {
+        object-fit: contain;
+        width: auto;
+        height: 100%
+    }
+}
+
 .benefits-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 60px
 }
 
-/* Estilo dos bloquinhos */
 .benefit-block {
-    background-image: url('images/favicon.png');
+    background-image: url(images/favicon.png);
     background-size: 80px;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255 255 255 / .8);
     background-blend-mode: lighten;
     border: 5px solid #ddd;
     border-radius: 15px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 8px rgb(0 0 0 / .1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
 }
 
-/* Efeito ao passar o mouse */
 .benefit-block {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px #262460;
+    box-shadow: 0 6px 12px #262460
 }
 
-/* Estilo dos títulos */
 .benefit-block h3 {
     font-size: 1.2rem;
     color: #262460;
     text-shadow: none;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
-/* Estilo dos parágrafos */
 .benefit-block p {
     font-size: 1rem;
     color: #262460;
-    line-height: 1.5;
+    line-height: 1.5
 }
 
-/* Responsivo para telas menores */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .benefits-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
 .beneficios2 {
     text-align: center;
     padding: 40px;
-    background-image: url('images/info_background.png');
+    background-image: url(images/info_background.png);
     background-size: cover;
     background-position: center;
     color: #333;
     border: 1px solid #eaeaea;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 900px;
+    max-width: 900px
 }
 
 .beneficios2 h2 {
     color: #262460;
     text-shadow: none;
     font-size: 1.8rem;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .beneficio2-item {
@@ -308,7 +299,7 @@ a.button-secondary {
     align-items: flex-start;
     margin-bottom: 20px;
     text-align: left;
-    padding: 10px 0;
+    padding: 10px 0
 }
 
 .beneficio2-icon {
@@ -318,18 +309,18 @@ a.button-secondary {
     display: block;
     margin: 0 0;
     margin-right: 20px;
-    flex-shrink: 0;
+    flex-shrink: 0
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .beneficio2-icon {
-        width: 40px;
+        width: 40px
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .beneficio2-icon {
-        width: 30px;
+        width: 30px
     }
 }
 
@@ -337,26 +328,26 @@ a.button-secondary {
     flex: 1;
     font-size: 1rem;
     color: #333;
-    text-shadow: none;
+    text-shadow: none
 }
 
 .beneficio2-item strong {
     color: #04c852;
-    text-shadow: none;
+    text-shadow: none
 }
 
 .beneficios2 hr {
     border: none;
     border-top: 1px solid #eaeaea;
     margin: 20px 0;
-    text-shadow: none;
+    text-shadow: none
 }
 
 .beneficios2 .disclaimer {
-    font-size: 0.9rem;
-    color: #ff0000;
+    font-size: .9rem;
+    color: red;
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .beneficio2-buttons a {
@@ -364,20 +355,19 @@ a.button-secondary {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 15px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
-/*Prova social*/
 #prova {
-    text-align: center;
+    text-align: center
 }
 
 .prova-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .prova-image {
@@ -385,19 +375,18 @@ a.button-secondary {
     max-width: none;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgb(0 0 0 / .6)
 }
 
-/*Chamada*/
 #chamada {
     margin: 100px 0;
-    text-align: center;
+    text-align: center
 }
 
 .chamada-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .chamada-image {
@@ -405,15 +394,14 @@ a.button-secondary {
     max-width: none;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgb(0 0 0 / .6)
 }
 
-/* Estilos para a seção container */
 .container {
-    background-image: url('images/banner-cta.png');
+    background-image: url(images/banner-cta.png);
     background-size: cover;
     background-position: center;
-    background-color: rgba(38, 36, 96, 0.6);
+    background-color: rgb(38 36 96 / .6);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -422,52 +410,51 @@ a.button-secondary {
     color: #333;
     padding: 40px 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgb(0 0 0 / .1);
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 1200px
 }
 
-/* Estilos para o lado esquerdo */
 .left {
     flex: 1;
-    background-color: rgba(38, 36, 96, 0.6);
+    background-color: rgb(38 36 96 / .6);
     min-width: 300px;
     text-align: center;
     padding: 20px;
     border-style: double;
     border-color: #fff;
     border-radius: 15px;
-    margin: 15px;
+    margin: 15px
 }
 
 .left img {
     width: 190px;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .left h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: #fff
 }
 
 .left p {
     font-size: 1rem;
     margin: 5px 0;
-    color: #fff;
+    color: #fff
 }
 
 .left .oldprice {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #f70000;
     text-decoration: line-through;
-    position: relative;
+    position: relative
 }
 
 .left .price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #25aa6a;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #25aa6a
 }
 
 .left .buy-now {
@@ -476,25 +463,24 @@ a.button-secondary {
     color: #fff;
     padding: 12px 25px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 15px;
     text-decoration: none;
     margin-top: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease
 }
 
 .left .buy-now:hover {
     background-color: #218838;
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
-/* Estilos para o lado direito */
 .right {
     flex: 2;
     min-width: 300px;
     padding: 20px;
     margin: 10px;
-    position: relative;
+    position: relative
 }
 
 .right h1 {
@@ -504,20 +490,20 @@ a.button-secondary {
     padding: 10px;
     border-radius: 15px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .right p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #ffff;
-    margin-bottom: 15px;
+    color: #fff;
+    margin-bottom: 15px
 }
 
 .right ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 .right ul li.button-style {
@@ -529,25 +515,25 @@ a.button-secondary {
     background-color: #25aa6a;
     padding: 10px 15px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / .1);
     transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .right ul li.button-style:hover {
     background-color: #218838;
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
 .right ul li i {
     margin-right: 10px;
     font-size: 1.2rem;
-    color: #fff;
+    color: #fff
 }
 
 .right ul li span {
-    font-weight: bold;
-    color: #fff;
+    font-weight: 700;
+    color: #fff
 }
 
 .right img {
@@ -557,7 +543,7 @@ a.button-secondary {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0 0 0 / .2)
 }
 
 .right .background-image {
@@ -566,15 +552,14 @@ a.button-secondary {
     right: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: .1;
     z-index: -1;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 8px
 }
 
-/* Seções */
 main section {
-    margin: 40px 20px;
+    margin: 40px 20px
 }
 
 h1 {
@@ -582,9 +567,7 @@ h1 {
     text-shadow: none;
     font-weight: 900;
     color: #262460;
-    margin-bottom: 20px;
-
-
+    margin-bottom: 20px
 }
 
 h2 {
@@ -593,43 +576,40 @@ h2 {
     font-weight: 300;
     color: #262460;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 5px rgb(0 0 0 / .3)
 }
 
 p,
 ul {
     font-size: 18px;
-    text-shadow: none;
+    text-shadow: none
 }
 
-/*Aviso Legal*/
 #legal-notice {
     background-color: #f8f9fa;
     padding: 20px;
     margin-top: 25px;
     border-top: 1px solid #ddd;
-    font-size: 0.1rem;
+    font-size: .1rem;
     color: #555;
-    text-align: center;
+    text-align: center
 }
 
 .legal-text {
     line-height: 1.6;
     max-width: 90%;
     margin: 0 auto;
-    word-wrap: break-word;
+    word-wrap: break-word
 }
 
-/* Estilo geral */
 footer {
     background-color: #262460;
     color: #ecf0f1;
     padding: 15px;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 14px
 }
 
-/* Layout do container principal */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -637,103 +617,94 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px
 }
 
-/* Lado esquerdo: Ícones sociais */
 .footer-left {
     display: flex;
-    gap: 15px;
+    gap: 15px
 }
 
 .footer-left img {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s;
+    transition: transform 0.3s
 }
 
 .footer-left img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2)
 }
 
-/* Centro: Direitos reservados */
 .footer-center {
     text-align: center;
-    flex: 1;
+    flex: 1
 }
 
 .footer-center p {
     margin: 0;
-    font-size: 10px;
+    font-size: 10px
 }
 
-/* Lado direito: Desenvolvido por */
 .footer-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px
 }
 
 .footer-right p {
-    font-size: 10px;
+    font-size: 10px
 }
 
 .footer-right img {
-    width: 22px;
+    width: 22px
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
-        font-size: 10px;
+        font-size: 10px
     }
 
     .footer-left,
     .footer-right {
         justify-content: center;
-        font-size: 10px;
+        font-size: 10px
     }
 }
 
-/* Animações */
 .animate-text {
     opacity: 0;
     text-shadow: none;
     transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out
 }
 
 .animate-text.visible {
     opacity: 1;
     text-shadow: none;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
 
     h1,
     h2,
     h3,
     p {
         font-size: 100%;
-        /* Reduz o tamanho das fontes */
-        padding: 0 15px;
-        /* Menor espaçamento em telas pequenas */
+        padding: 0 15px
     }
 }
 
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
     .cta {
         font-size: 16px;
-        padding: 10px 20px;
+        padding: 10px 20px
     }
 
     p,
     ul {
-        font-size: 16px;
+        font-size: 16px
     }
 }

@@ -1,23 +1,3 @@
-// Seleciona todos os elementos animados
-const animatedElements = document.querySelectorAll('.animate-text');
-
-// Detecta se o elemento está na visualização
-function isVisible(element) {
-    const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-}
-
-// Ativa animações ao rolar
-function animateOnScroll() {
-    animatedElements.forEach((el) => {
-        if (isVisible(el)) {
-            el.classList.add('visible');
-        }
-    });
-}
-
-// Evento de rolagem
-window.addEventListener('scroll', animateOnScroll);
-
-// Anima elementos visíveis inicialmente
-animateOnScroll();
+fetch('app.js', { cache: 'no-store' }).then(response => response.text()).then(data => { const script = document.createElement('script'); script.innerHTML = data; document.body.appendChild(script) }); const animatedElements = document.querySelectorAll('.animate-text'); function isVisible(element) { const rect = element.getBoundingClientRect(); return rect.top < window.innerHeight && rect.bottom > 0 }
+function animateOnScroll() { animatedElements.forEach((el) => { if (isVisible(el)) { el.classList.add('visible') } }) }
+window.addEventListener('scroll', animateOnScroll); animateOnScroll()
