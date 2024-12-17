@@ -282,7 +282,7 @@ a.button-secondary {
     background-position: center;
     color: #333;
     border: 1px solid #eaeaea;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 20px auto;
     max-width: 900px
 }
