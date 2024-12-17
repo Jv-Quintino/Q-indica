@@ -17,7 +17,7 @@ header {
 }
 
 .header-with-bg {
-    background-image: url(images/cabecalho3.png);
+    background-image: url(images/cabecalho12.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -162,16 +162,43 @@ a.button-secondary {
 }
 
 .video-container {
-    display: block;
-    margin: 20px auto;
+    position: relative;
     width: 80%;
-    max-width: 700px;
-    height: 400px;
-    border: 10px solid #262460;
-    border-radius: 15px;
-    box-shadow: 0 6px 10px rgb(0 0 0 / .4);
-    margin-bottom: 60px
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 56.25%;
 }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 15px;
+}
+
+@media (max-width: 850px) {
+    .video-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        padding-top: 56.25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        width: 100%;
+        padding-top: 56.25%;
+    }
+}
+
 
 .animation-banner {
     position: relative;
@@ -421,7 +448,6 @@ a.button-secondary {
     min-width: 300px;
     text-align: center;
     padding: 20px;
-    border-style: double;
     border-color: #fff;
     border-radius: 15px;
     margin: 15px
@@ -693,7 +719,6 @@ footer {
     h3,
     p {
         font-size: 100%;
-        padding: 0 15px
     }
 }
 
