@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    text-align:center;
+    text-align: center;
 }
 
 img {
@@ -12,6 +12,11 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.animate-text {
+    font-family: 'Nunito', sans-serif;
+    text-shadow: none;
 }
 
 header {
@@ -60,7 +65,7 @@ header {
 }
 
 main {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .logo-img {
@@ -245,7 +250,7 @@ a.button-secondary {
         object-fit: contain;
         width: auto;
         height: 100%;
-        
+
     }
 }
 
@@ -714,15 +719,15 @@ footer {
     h3,
     p {
         font-size: 100%;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 }
 
 @media screen and (max-width:768px) {
     .cta {
         font-size: 16px;
-        padding: 10px 20px
+        padding: 10px 20px;
     }
 
     p,
